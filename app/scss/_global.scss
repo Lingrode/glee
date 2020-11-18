@@ -1,9 +1,25 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   @extend %dmsans-700;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   max-width: 1770px;
   margin: 0 auto;
+}
+
+.container-second {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
 }
