@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 
@@ -214,7 +215,120 @@
   }
 }
 
+.top-slider {
+  &__inner {
+    background-color: #fcd7b6;
+    height: 820px;
+  }
 
+  &__item {
+    display: flex !important;
+    justify-content: space-around;
+  }
+
+  &__content {
+    padding: 200px 0 0 240px;
+    max-width: 670px;
+  }
+
+  &__title {
+    color: #243f4d;
+    font-size: 72px;
+    line-height: 70px;
+    @extend %rubik-500;
+    padding-bottom: 45px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+    @extend %rubik-400;
+    color: #436372;
+    padding-bottom: 40px;
+    width: 380px;
+  }
+
+  &__link {
+    padding: 22px 100px 22px 23px;
+    background-color: #a3bbc8;
+    color: #fff;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/slider-btn-arrow.svg');
+      width: 22px;
+      height: 9px;
+      top: 57%;
+      left: 87%;
+      transform: translate(-57%, -87%);
+    }
+  }
+
+  &__img {
+    margin: 100px 150px 0 0;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: 0 5px;
+
+      button {
+        border: none;
+        font-size: 11px;
+        line-height: 9px;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .5);
+        color: #243f4d;
+        @extend %rubik-500;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+
+  &__info-item {
+    padding: 50px 0 45px;
+    width: 205px;
+  }
+
+  &__info-title {
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+
+  &__info-text {
+    @extend %dmsans-400;
+    color: #585858;
+    line-height: 30px;
+  }
+
+}
+
+.info-support::before {
+  content: "";
+  background-image: url('../app/images/logo.png');
+  width: 51px;
+  height: 53px;
+}
 
 
 
