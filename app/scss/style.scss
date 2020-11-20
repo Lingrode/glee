@@ -306,7 +306,7 @@
 
   &__info-item {
     padding: 50px 0 45px;
-    width: 205px;
+    width: 295px;
   }
 
   &__info-title {
@@ -320,16 +320,38 @@
     color: #585858;
     line-height: 30px;
   }
-
 }
 
-.info-support::before {
-  content: "";
-  background-image: url('../app/images/logo.png');
-  width: 51px;
-  height: 53px;
+.info-support,
+.info-delivery,
+.info-payment {
+  display: flex;
+
+  svg {
+    margin: 10px 25px 0 0;
+  }
 }
 
+.info-payment {
+  svg {
+    width: 51px;
+    height: 53px;
+  }
+}
+
+.info-delivery {
+  svg {
+    width: 53px;
+    height: 36px;
+  }
+}
+
+.info-payment {
+  svg {
+    width: 54px;
+    height: 52px;
+  }
+}
 
 
 @import "media";
