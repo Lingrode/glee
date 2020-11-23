@@ -356,6 +356,8 @@
 }
 
 .products {
+  margin-bottom: 185px;
+
   &-title {
     margin-bottom: 40px;
   }
@@ -363,14 +365,11 @@
   &__filter {
     display: flex;
     justify-content: center;
-    
+    margin-bottom: 80px;
 
-    &-item+&-item {
+    &-btn+&-btn {
       margin-left: 30px;
     }
-  }
-  &__filter-item {
-    margin-bottom: 80px;
   }
 
   &__filter-btn {
@@ -380,7 +379,7 @@
     border: none;
   }
 
-  &__filter-btn--active,
+  .mixitup-control-active,
   &__filter-btn:hover {
     color: $title;
   }
@@ -402,10 +401,12 @@
   height: 380px;
   overflow: hidden;
   position: relative;
+
   &__img {
     // padding: 30px 45px 80px;
     margin: auto auto;
   }
+
   &__link-box {
     display: flex;
     justify-content: space-around;
@@ -419,6 +420,7 @@
     transform: translateY(600%);
     transition: all .5s;
   }
+
   &__link {
     width: 45px;
     height: 45px;
@@ -428,26 +430,200 @@
     justify-content: center;
     align-items: center;
   }
+
   &__link:hover {
     background-color: #a3bac7;
+
     path {
       fill: #fff;
     }
   }
+
   &:hover {
     .product-item__link-box {
       transform: translateY(0);
     }
   }
+
   &__name {
     @extend %dmsans-500;
     color: #243f4d;
     font-size: 16px;
     line-height: 40px;
   }
+
   &__price {
     color: #a3bbc8;
     padding-bottom: 35px;
+  }
+}
+
+.exclusive {
+  margin-bottom: 105px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.exclusive-item {
+  max-width: 870px;
+  width: 100%;
+  height: 390px;
+  background-color: #feefe2;
+  display: flex;
+  justify-content: space-between;
+
+  &__info {
+    max-width: 345px;
+  }
+
+  &__img {
+    margin-top: -100px;
+    margin-left: 140px;
+    margin-bottom: 85px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    line-height: 30px;
+    @extend %rubik-400;
+    color: #243f4d;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    color: #436372;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 17px 85px 19px 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/exclusive-btn-arrow.svg');
+    width: 23px;
+    height: 10px;
+    top: 22px;
+    left: 137px;
+  }
+
+  .info-left {
+    margin-right: 135px;
+  }
+
+  .info-right {
+    margin-right: 90px;
+  }
+
+  .title-left {
+    margin-top: 110px;
+  }
+
+  .title-right {
+    margin-top: 85px;
+  }
+}
+
+.new-design {
+  margin-bottom: 120px;
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__filter-btn+&__filter-btn {
+    margin-left: 30px;
+  }
+
+  &__filter-btn {
+    color: #8b8b8b;
+    transition: all .5s;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__filter-btn:hover,
+  .mixitup-control-active {
+    color: $title;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 30px
+  }
+
+  &__item {
+    position: relative;
+    background-color: #f8f8f8;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+    margin: 30px 0 0 37px;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 10px;
+  }
+
+  &__about {
+    color: #a3bbc8;
+  }
+
+  &__chair {
+    // position: absolute;
+    margin-top: 55px;
+    margin-left: 200px;
+  }
+}
+
+.video-popup {
+  position: relative;
+  
+  margin-bottom: 120px;
+  &__image-bg {
+    margin:  0 auto;
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(163, 187, 200, .5);
+    }
+    100% {
+      box-shadow: 0 0 0 40px rgba(163, 187, 200, 0);
+    }
   }
 }
 
