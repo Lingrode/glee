@@ -23,3 +23,7 @@ body {
 .main {
   flex-grow: 1;
 }
+
+.title {
+  @extend %title;
+}
