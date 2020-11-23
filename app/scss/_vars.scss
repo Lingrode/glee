@@ -37,3 +37,10 @@ $footer-text: #7b7b7b;
   color: $title;
   text-align: center;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
