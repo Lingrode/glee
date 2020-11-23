@@ -30,3 +30,10 @@ $footer-text: #7b7b7b;
   font-family: 'Rubik-Regular';
   font-weight: 400;
 }
+
+%title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $title;
+  text-align: center;
+}
