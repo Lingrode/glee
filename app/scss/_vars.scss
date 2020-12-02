@@ -1,5 +1,6 @@
 $title: #191919;
 $footer-text: #7b7b7b;
+$about-color: #243f4d;
 
 %dmsans-700 {
   font-family: 'DMSans-Bold', sans-serif;
@@ -21,6 +22,11 @@ $footer-text: #7b7b7b;
   font-weight: 700;
 }
 
+%poppins-600 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
 %rubik-500 {
   font-family: 'Rubik-Medium';
   font-weight: 500;
@@ -31,12 +37,29 @@ $footer-text: #7b7b7b;
   font-weight: 400;
 }
 
+%rubik-700 {
+  font-family: 'Rubik-Bold';
+  font-weight: 700;
+}
+
+%rubik-300 {
+  font-family: 'Rubik-Light';
+  font-weight: 300;
+}
+
 
 %title {
   @extend %dmsans-700;
   font-size: 36px;
   color: $title;
   text-align: center;
+}
+
+%title-about-us {
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $about-color;
+  line-height: 32px;
 }
 
 @function max($numbers...) {
