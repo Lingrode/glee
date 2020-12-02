@@ -28,6 +28,10 @@ body {
   @extend %title;
 }
 
+.title-about-us {
+  @extend %title-about-us;
+}
+
 .breadcrumbs {
   padding-bottom: 33px;
   &__list {
