@@ -70,3 +70,38 @@ body {
     opacity: 0.6;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  &__list {
+    display: flex;
+  }
+  &__item + .pagination__item{
+    padding-left: 15px;
+  }
+  &__link,
+  &__next
+  {
+    padding: 15px 21px;
+    color: $about-color;
+    @extend %rubik-400;
+    line-height: 30px;
+    border: 1px solid #a3bbc8;
+    transition: all .3s;
+    &:hover {
+      color: #fff;
+      background-color: #a3bbc8;
+    }
+  }
+  &__link--active {
+    color: #fff;
+    background-color: #a3bbc8;
+  }
+  &__next {
+    margin-left: 15px;
+    padding: 9px 19px; 
+  }
+}
