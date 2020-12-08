@@ -21,8 +21,10 @@
     "gulp-uglify-es": "^2.0.0",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "rateyo": "^2.3.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^6.4.0"
   }
 }
