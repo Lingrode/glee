@@ -1475,7 +1475,6 @@
     width: 390px;
     height: 530px;
     border: 2px solid #f2f2f2;
-    // padding: 5px;
     margin-left: 25px;
   }
   &__big-item {
@@ -1533,7 +1532,6 @@
     color: $about-color;
     text-align: left;
     margin-bottom: 70px;
-    // position: relative;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -1550,7 +1548,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url('../images/icons/related-slider-arrow-left.svg');
+      background-image: url("../images/icons/related-slider-arrow-left.svg");
       width: 22px;
       height: 9px;
     }
@@ -1567,7 +1565,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url('../images/icons/related-slider-arrow-right.svg');
+      background-image: url("../images/icons/related-slider-arrow-right.svg");
       width: 22px;
       height: 9px;
     }
@@ -1577,6 +1575,181 @@
   }
   &__items {
     position: unset;
+  }
+}
+
+.blog-page {
+  &__inner {
+    display: flex;
+  }
+  &__content {
+    max-width: 830px;
+  }
+  &__item {
+    margin-bottom: 80px;
+  }
+  &__img-link {
+    display: block;
+    max-width: 830px;
+    height: 500px;
+    margin-bottom: 35px;
+  }
+  &__info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    background-color: #a3bbc8;
+    width: 275px;
+    height: 70px;
+    margin-top: -104px;
+    position: absolute;
+    z-index: 10;
+  }
+  &__info-date,
+  &__info-author {
+    color: #fff;
+    font-size: 12px;
+    @extend %rubik-400;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0 20px;
+    position: relative;
+  }
+  &__info-date::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/icons/calendar-alt-regular.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    left: -18px;
+  }
+  &__info-author::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/icons/user-regular.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: -19px;
+    width: 20px;
+    height: 20px;
+  }
+  &__item-title {
+    color: #333333;
+    font-size: 36px;
+    @extend %rubik-400;
+    margin-bottom: 30px;
+  }
+  &__item-text {
+    color: $about-color;
+    @extend %rubik-400;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  &__aside {
+    width: 270px;
+    margin-left: 70px;
+  }
+  &__item-link {
+    padding: 17px 82px 21px 20px;
+    border: 1px solid #a3bbc8;
+    color: #a3bbc8;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icons/blog-page-arrow-right.svg");
+      width: 22px;
+      height: 9px;
+      top: 23px;
+      right: 25px;
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.search {
+  &__form {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  &__input {
+    width: 230px;
+    height: 45px;
+    border: 1px solid #dae4e9;
+    border-radius: 5px;
+    border-right: none;
+    padding: 5px 20px 5px 10px;
+  }
+  &__btn {
+    width: 50px;
+    height: 45px;
+    background-color: #edf1f4;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    cursor: pointer;
+  }
+}
+
+.recents {
+  &__title {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background-color: #a3bbc8;
+      border-radius: 2px;
+      top: 10px;
+      right: 80px;
+    }
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__item-link {
+    width: 71px;
+    height: 69px;
+  }
+  &__item-img {
+    min-width: 71px;
+    height: 69px;
+  }
+  &__item-box {
+    margin-left: 20px;
+  }
+  &__item-title {
+    color: #333333;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__item-date {
+    color: #9a9a9a;
+    font-size: 12px;
+    line-height: 30px;
+    @extend %rubik-400;
+    margin-left: 7px;
+  }
+  .box {
+    display: flex;
+  }
+  .calendar {
+    max-width: 15px;
+    margin-top: 6px;
   }
 }
 
