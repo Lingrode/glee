@@ -33,6 +33,7 @@ $(function () {
     height: '160px',
     spaceBetween: '0px'
   });
+  
   var productBig = new Swiper('.product-slide__big', {
     // height: '530px',
     slidesPerView: 1,
@@ -108,20 +109,15 @@ $(function () {
       "</svg>"
   });
 
+  var containerEl1 = document.querySelector('[data-ref="products"]');
+  var containerEl2 = document.querySelector('[data-ref="design"]');
 
-  var mixerOne = mixitup('.products__items');
+  var config = {
+    controls: {
+      scope: "local",
+    },
+  };
 
-  // var myName = mixitup('.products__items', {
-  //   selectors: {
-  //     control: '.products__filter'
-  //   }
-  // }),
-
-  var mixerTwo = mixitup('.new-design__items');
-
-  // var mixerTwo = mixitup('.new-design__items', {
-  //   selectors: {
-  //     control: '.new-design__filter'
-  //   }
-  // });
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
 });

@@ -34,22 +34,20 @@ body {
 
 .breadcrumbs {
   padding-bottom: 33px;
+  padding-left: 20px;
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  }
-  &__item + &__item {
-    margin-left: 17px;
   }
   &__item {
+    padding-right: 20px;
     position: relative;
     &::after {
       content: "/";
       position: absolute;
       top: 0;
-      left: 44px;
+      right: 7px;
       color: #222933;
       opacity: 0.6;
       font-size: 14px;
